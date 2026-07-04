@@ -30,6 +30,18 @@ Edit these two files (click the file on GitHub → pencil icon → commit):
 Optional: `config.yaml` → `search.queries` — the search terms used on
 LinkedIn/job boards. Defaults fit automotive; adjust for your field.
 
+**Not automotive?** Any field works — medicine, law, CS, finance, math…
+Change four things:
+1. `persona:` in `profile.yaml` — one line about you
+2. The `domain:` block in `profile.yaml` — teaches the filters your field's
+   keywords, employers, and instant-reject titles (example in the file;
+   easiest way: paste the block + your CV into an AI chat and ask it to
+   fill the lists)
+3. `search.queries` in `config.yaml` — what to type into the job boards
+4. Optional: `platforms.companies.targets` in `config.yaml` — your field's
+   employers' career portals (works with any company on SmartRecruiters,
+   Greenhouse, or Lever)
+
 ### 2. Groq API key — the free AI grader (3 min)
 1. Sign up at https://console.groq.com (Google login works).
 2. **API Keys → Create API Key** → copy the `gsk_...` value (shown only once).

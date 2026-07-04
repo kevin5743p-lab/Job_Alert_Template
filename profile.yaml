@@ -91,6 +91,30 @@ language_preference: no_german_required
 years_of_experience: 0
 career_level: student            # applies seniority penalties in scoring
 
+# ── YOUR FIELD (the "domain") ─────────────────────────────────
+# This block teaches the filters what YOUR field looks like. Without it,
+# automotive-engineering defaults apply (see matchers/domain_classifier.py).
+# Works for ANY field — medicine, law, CS, finance, math... Fill every list
+# with terms from YOUR world (English + German). Tip: paste this block and
+# your CV into any AI chat and ask it to fill the lists for your field.
+#
+# domain:
+#   name: "corporate law"                    # your field, used in AI prompts
+#   core_terms:                              # strong signals a job is in-field
+#     [legal, recht, kanzlei, vertragsrecht, datenschutz, dsgvo, compliance]
+#   supporting_terms:                        # relevant but ambiguous alone
+#     [contract, vertrag, regulatory]
+#   adjacent_terms:                          # neighboring industries
+#     [tax advisory, steuerberatung, notariat]
+#   core_companies:                          # employers central to your field
+#     [freshfields, noerr, hengeler mueller]
+#   adjacent_companies:
+#     [pwc legal, kpmg law]
+#   reject_title_terms:                      # instantly reject these titles
+#     [software developer, mechanical engineer, nurse, sales manager]
+#   bonus_terms:                             # your personal strengths
+#     [dsgvo, gdpr, compliance, it-recht]
+
 # ── Two-stage scoring thresholds ──────────────────────────────
 # Stage 1: cheap rule-based pre-filter — jobs below this are dropped before AI
 prefilter_min_score: 15
