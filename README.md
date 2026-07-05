@@ -20,27 +20,24 @@ your Telegram. Completely free to run. No laptop needed after setup.
    live inside it.
 
 ### 1. Make it yours (10 min — the most important step)
-Edit these two files (click the file on GitHub → pencil icon → commit):
-1. **`cv.md`** — replace the whole thing with your real CV. The AI grades jobs
-   against this text; real detail = better scores. The system refuses to run
-   its AI stage until the `[placeholders]` are gone.
-2. **`profile.yaml`** — your name, a one-line `persona`, your skills, target
-   job titles, cities, and how much German you have.
+Edit **ONE file**: `cv.md` (click it on GitHub → pencil icon → commit).
+Paste your real CV into the structure and fill the **Additional
+Information** section at the bottom (what you're looking for, interests,
+locations, things to avoid).
 
-Optional: `config.yaml` → `search.queries` — the search terms used on
-LinkedIn/job boards. Defaults fit automotive; adjust for your field.
+That's it. On your first real run, the system reads `cv.md` and
+**auto-generates your entire matching profile** — your field, skills,
+target job titles, keyword filters, and job-board search queries — and
+commits it back to your repo as `profile.yaml`. This works for ANY field:
+engineering, medicine, law, CS, finance, math…
 
-**Not automotive?** Any field works — medicine, law, CS, finance, math…
-Change four things:
-1. `persona:` in `profile.yaml` — one line about you
-2. The `domain:` block in `profile.yaml` — teaches the filters your field's
-   keywords, employers, and instant-reject titles (example in the file;
-   easiest way: paste the block + your CV into an AI chat and ask it to
-   fill the lists)
-3. `search.queries` in `config.yaml` — what to type into the job boards
-4. Optional: `platforms.companies.targets` in `config.yaml` — your field's
-   employers' career portals (works with any company on SmartRecruiters,
-   Greenhouse, or Lever)
+Afterwards you can fine-tune the generated `profile.yaml` by hand any time
+(it won't be overwritten), or regenerate it after a CV update by running
+the workflow… or locally: `python main.py --personalize`.
+
+Optional power-tuning in `config.yaml`:
+- `platforms.companies.targets` — track your field's employers' career
+  portals directly (any company on SmartRecruiters, Greenhouse, or Lever)
 
 ### 2. Groq API key — the free AI grader (3 min)
 1. Sign up at https://console.groq.com (Google login works).

@@ -1,9 +1,11 @@
 # Your CV
 
-<!-- Replace everything in [brackets] with your real details, then delete the
-     brackets. The AI reads this file to judge how well each job fits YOU —
-     the more real detail, the better the scores. The system refuses to use
-     this file until the placeholder text below is gone. -->
+<!-- THIS IS THE ONLY FILE YOU MUST EDIT.
+     Replace everything in [brackets] with your real details, then delete the
+     brackets. On your first real run, the system reads this file and
+     auto-generates your entire matching profile (profile.yaml) from it:
+     your field, skills, target job titles, search queries — everything.
+     The more real detail you give, the better your job matches. -->
 
 ## Education
 
@@ -29,3 +31,12 @@
 
 - English ([level])
 - German ([level, e.g. B1])
+
+## Additional Information
+
+<!-- Free text — this steers the job matching beyond the bare CV. Mention: -->
+
+- **What I'm looking for:** [e.g. working student roles and thesis positions in embedded systems; open to internships]
+- **Interests / vision:** [e.g. I want to work on autonomous systems long-term; fascinated by medical robotics]
+- **Preferred locations:** [e.g. Munich, Stuttgart, remote OK; only Germany]
+- **Anything to avoid:** [e.g. no pure sales roles, no consulting, nothing requiring fluent German]
